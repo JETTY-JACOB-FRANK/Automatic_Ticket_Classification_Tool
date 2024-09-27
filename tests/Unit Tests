@@ -1,0 +1,18 @@
+import pytest
+from llm_integration.openai_client import OpenAI
+
+def test_openai_response():
+    # Mock the OpenAI API response
+    openai_client = OpenAI()
+    prompt = "What is the capital of France?"
+    response = openai_client.get_response(prompt)
+
+    # Assert the response contains expected data (mock this for testing)
+    assert response == "Paris"  # Example expected response
+
+def test_openai_empty_input():
+    openai_client = OpenAI()
+    prompt = ""
+    
+    with pytest.raises(ValueError):
+        openai_client.get_response(prompt)

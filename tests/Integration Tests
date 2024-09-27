@@ -1,0 +1,13 @@
+from inference.pipeline import classify_ticket
+from utils.utils import create_embeddings
+
+def test_classify_ticket():
+    # Mock user query
+    user_input = "I need to reset my password."
+
+    # Use the pipeline to classify the ticket
+    embeddings = create_embeddings()
+    result = classify_ticket(user_input, embeddings)
+
+    # Assert that the result is correctly classified (mock result for testing)
+    assert result == "IT"
