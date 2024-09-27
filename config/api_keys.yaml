@@ -1,0 +1,8 @@
+# config/api_keys.yaml
+
+pinecone:
+  api_key: ""
+  environment: ""       # Replace with your actual Pinecone environment
+
+openai:
+  api_key: "

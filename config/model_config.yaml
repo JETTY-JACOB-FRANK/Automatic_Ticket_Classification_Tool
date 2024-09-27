@@ -1,0 +1,17 @@
+# config/model_config.yaml
+
+model:
+  name: "SVM Ticket Classifier"
+  path: "modelsvm.pk1"        # Path to the saved model for classification
+  type: "svm"                 # Type of model (SVM, etc.)
+  parameters:
+    kernel: "linear"
+    C: 1.0
+
+embeddings:
+  model_name: "all-MiniLM-L6-v2"   # Pretrained embedding model
+  dimension: 384                   # Dimensionality of embeddings
+
+similarity_search:
+  k: 2                            # Number of similar documents to retrieve
+   
